@@ -1,1 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Creative Taleem – A platform for quality learning and creative education.">
+  <meta name="keywords" content="Creative Taleem, Education, Blog, Learning, Tutorials">
+  <meta name="author" content="Creative Taleem">
+  <title>Creative Taleem - Home</title>
+
+  <link rel="stylesheet" href="/styles/main.css" />
+  <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <!-- Include or paste header.html here -->
+    <!-- Example: -->
+    <!--#include virtual="/assets/header.html" -->
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Creative Taleem</h1>
+      <p>Unlock creativity and grow your knowledge with modern educational resources.</p>
+      <a href="/blog/" class="btn">Explore Articles</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content container">
+    <h2>Latest Posts</h2>
+    <div class="post-grid">
+      <!-- Blog Post Card -->
+      <article class="post-card">
+        <a href="/blog/html-intro">
+          <img src="/images/html-post.jpg" alt="HTML Post Thumbnail" />
+          <h3>Getting Started with HTML5</h3>
+          <p>A beginner-friendly introduction to HTML for building websites.</p>
+        </a>
+      </article>
+
+      <article class="post-card">
+        <a href="/blog/css-tips">
+          <img src="/images/css-post.jpg" alt="CSS Post Thumbnail" />
+          <h3>10 CSS Tips for Better Styling</h3>
+          <p>Enhance your website design with these advanced CSS tricks.</p>
+        </a>
+      </article>
+
+      <!-- Add more post cards here -->
+    </div>
+  </main>
+
+  <!-- Sidebar (optional for home) -->
+  <!--#include virtual="/assets/sidebar.html" -->
+
+  <!-- Footer -->
+  <footer>
+    <!-- Include or paste footer.html here -->
+  </footer>
+
+  <script>
+    // Footer auto-year
+    const yearSpan = document.getElementById("currentYear");
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
 
