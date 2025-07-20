@@ -1,1 +1,18 @@
+<!-- footer.html -->
+<footer class="site-footer">
+  <div class="container footer-container">
+    <div class="footer-left">
+      <p>&copy; <span id="currentYear"></span> Creative Taleem. All rights reserved.</p>
+    </div>
+    <div class="footer-right">
+      <a href="/pages/privacy-policy/">Privacy Policy</a>
+      <a href="/pages/about/">About</a>
+      <a href="/pages/contact/">Contact</a>
+    </div>
+  </div>
+</footer>
 
+<script>
+  // Auto update year
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
