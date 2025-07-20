@@ -3,13 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Creative Taleem – A platform for quality learning and creative education.">
-  <meta name="keywords" content="Creative Taleem, Education, Blog, Learning, Tutorials">
+  <meta name="description" content="Creative Taleem – A platform for quality learning and creative education with modern tutorials and resources.">
+  <meta name="keywords" content="Creative Taleem, Education, Blog, Learning, Tutorials, Web Development, Programming">
   <meta name="author" content="Creative Taleem">
-  <title>Creative Taleem - Home</title>
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Creative Taleem - Modern Education Platform">
+  <meta property="og:description" content="Unlock creativity and grow your knowledge with modern educational resources and tutorials.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://creativetaleem.com">
+  <meta property="og:image" content="/logo.webp">
+  
+  <title>Creative Taleem - Modern Education Platform</title>
 
   <link rel="stylesheet" href="/styles/main.css" />
   <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,38 +28,233 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>Welcome to Creative Taleem</h1>
-      <p>Unlock creativity and grow your knowledge with modern educational resources.</p>
-      <a href="/blog/" class="btn">Explore Articles</a>
+    <div class="hero-background">
+      <div class="hero-particles">
+        <span class="particle particle-1"></span>
+        <span class="particle particle-2"></span>
+        <span class="particle particle-3"></span>
+        <span class="particle particle-4"></span>
+        <span class="particle particle-5"></span>
+        <span class="particle particle-6"></span>
+      </div>
+    </div>
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-text">🚀 New Learning Experience</span>
+        </div>
+        <h1 class="hero-title">
+          Welcome to <span class="gradient-text">Creative Taleem</span>
+        </h1>
+        <p class="hero-description">
+          Unlock creativity and grow your knowledge with modern educational resources, 
+          interactive tutorials, and innovative learning experiences designed for the digital age.
+        </p>
+        <div class="hero-buttons">
+          <a href="/blog/" class="btn btn-primary">
+            <span>Explore Articles</span>
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="/courses/" class="btn btn-secondary">
+            <span>View Courses</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Articles</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Courses</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Students</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-container">
+          <div class="floating-card card-1">
+            <div class="card-icon">📚</div>
+            <div class="card-title">Learn</div>
+          </div>
+          <div class="floating-card card-2">
+            <div class="card-icon">💡</div>
+            <div class="card-title">Create</div>
+          </div>
+          <div class="floating-card card-3">
+            <div class="card-icon">🎯</div>
+            <div class="card-title">Achieve</div>
+          </div>
+          <div class="hero-main-visual">
+            <div class="visual-circle"></div>
+            <div class="visual-content">
+              <img src="/logo.webp" alt="Creative Taleem" class="hero-logo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Choose Creative Taleem?</h2>
+        <p class="section-description">Discover the features that make learning with us exceptional</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+              <path d="M2 17l10 5 10-5"/>
+              <path d="M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Interactive Learning</h3>
+          <p class="feature-description">Engage with hands-on tutorials and interactive content that makes learning enjoyable and effective.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Latest Technologies</h3>
+          <p class="feature-description">Stay ahead with cutting-edge technologies and modern development practices in our comprehensive courses.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="feature-title">Expert Community</h3>
+          <p class="feature-description">Join a vibrant community of learners and experts who support each other's growth and success.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Main Content -->
-  <main class="main-content container">
-    <h2>Latest Posts</h2>
-    <div class="post-grid">
-      <!-- Blog Post Card -->
-      <article class="post-card">
-        <a href="/blog/html-intro">
-          <img src="/images/html-post.jpg" alt="HTML Post Thumbnail" />
-          <h3>Getting Started with HTML5</h3>
-          <p>A beginner-friendly introduction to HTML for building websites.</p>
-        </a>
-      </article>
+  <main class="main-content">
+    <div class="container">
+      <div class="content-layout">
+        <div class="content-primary">
+          <div class="section-header">
+            <h2 class="section-title">Latest Posts</h2>
+            <p class="section-description">Stay updated with our newest articles and tutorials</p>
+          </div>
+          <div class="post-grid">
+            <!-- Blog Post Card -->
+            <article class="post-card">
+              <div class="post-image">
+                <img src="/images/html-post.jpg" alt="HTML5 Tutorial" loading="lazy" />
+                <div class="post-category">Tutorial</div>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span class="post-date">July 20, 2025</span>
+                  <span class="post-read-time">5 min read</span>
+                </div>
+                <h3 class="post-title">
+                  <a href="/blog/html-intro">Getting Started with HTML5</a>
+                </h3>
+                <p class="post-excerpt">A comprehensive beginner-friendly introduction to HTML5 for building modern, semantic websites with best practices.</p>
+                <div class="post-tags">
+                  <span class="tag">HTML5</span>
+                  <span class="tag">Web Development</span>
+                </div>
+              </div>
+            </article>
 
-      <article class="post-card">
-        <a href="/blog/css-tips">
-          <img src="/images/css-post.jpg" alt="CSS Post Thumbnail" />
-          <h3>10 CSS Tips for Better Styling</h3>
-          <p>Enhance your website design with these advanced CSS tricks.</p>
-        </a>
-      </article>
+            <article class="post-card">
+              <div class="post-image">
+                <img src="/images/css-post.jpg" alt="CSS Tips and Tricks" loading="lazy" />
+                <div class="post-category">Tips</div>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span class="post-date">July 18, 2025</span>
+                  <span class="post-read-time">8 min read</span>
+                </div>
+                <h3 class="post-title">
+                  <a href="/blog/css-tips">10 CSS Tips for Better Styling</a>
+                </h3>
+                <p class="post-excerpt">Enhance your website design with these advanced CSS tricks and modern techniques for responsive layouts.</p>
+                <div class="post-tags">
+                  <span class="tag">CSS3</span>
+                  <span class="tag">Design</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="post-card">
+              <div class="post-image">
+                <img src="/images/js-post.jpg" alt="JavaScript Fundamentals" loading="lazy" />
+                <div class="post-category">Course</div>
+              </div>
+              <div class="post-content">
+                <div class="post-meta">
+                  <span class="post-date">July 15, 2025</span>
+                  <span class="post-read-time">12 min read</span>
+                </div>
+                <h3 class="post-title">
+                  <a href="/blog/js-fundamentals">JavaScript Fundamentals for Beginners</a>
+                </h3>
+                <p class="post-excerpt">Master the basics of JavaScript programming with practical examples and interactive coding exercises.</p>
+                <div class="post-tags">
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">Programming</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          
+          <div class="load-more-container">
+            <button class="btn btn-outline">
+              <span>Load More Articles</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="content-sidebar">
+          <div data-include="/assets/sidebar.html"></div>
+        </aside>
+      </div>
     </div>
   </main>
 
-  <!-- Sidebar -->
-  <div data-include="/assets/sidebar.html"></div>
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <div class="newsletter-text">
+          <h2 class="newsletter-title">Stay Updated</h2>
+          <p class="newsletter-description">Get the latest articles and tutorials delivered to your inbox</p>
+        </div>
+        <form class="newsletter-form">
+          <div class="form-group">
+            <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+            <button type="submit" class="btn btn-primary newsletter-btn">
+              <span>Subscribe</span>
+            </button>
+          </div>
+          <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+        </form>
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <div data-include="/assets/footer.html"></div>
@@ -57,10 +262,51 @@
   <!-- JS for includes -->
   <script src="/scripts/include.js"></script>
 
-  <!-- Auto year -->
+  <!-- Auto year and interactions -->
   <script>
+    // Auto update year
     const yearSpan = document.getElementById("currentYear");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+    // Newsletter form handling
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsletterForm = document.querySelector('.newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const email = this.querySelector('.newsletter-input').value;
+          // Handle newsletter subscription here
+          alert('Thank you for subscribing!');
+          this.reset();
+        });
+      }
+
+      // Load more posts functionality
+      const loadMoreBtn = document.querySelector('.load-more-container .btn');
+      if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', function() {
+          // Load more posts logic here
+          this.innerHTML = '<span>Loading...</span>';
+          setTimeout(() => {
+            this.innerHTML = '<span>Load More Articles</span>';
+          }, 1000);
+        });
+      }
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
   </script>
 </body>
 </html>
