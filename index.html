@@ -14,11 +14,7 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <!-- Include or paste header.html here -->
-    <!-- Example: -->
-    <!--#include virtual="/assets/header.html" -->
-  </header>
+  <div data-include="/assets/header.html"></div>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -49,24 +45,22 @@
           <p>Enhance your website design with these advanced CSS tricks.</p>
         </a>
       </article>
-
-      <!-- Add more post cards here -->
     </div>
   </main>
 
-  <!-- Sidebar (optional for home) -->
-  <!--#include virtual="/assets/sidebar.html" -->
+  <!-- Sidebar -->
+  <div data-include="/assets/sidebar.html"></div>
 
   <!-- Footer -->
-  <footer>
-    <!-- Include or paste footer.html here -->
-  </footer>
+  <div data-include="/assets/footer.html"></div>
 
+  <!-- JS for includes -->
+  <script src="/scripts/include.js"></script>
+
+  <!-- Auto year -->
   <script>
-    // Footer auto-year
     const yearSpan = document.getElementById("currentYear");
     if (yearSpan) yearSpan.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
