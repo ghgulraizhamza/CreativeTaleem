@@ -3,23 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Creative Taleem – A platform for quality learning and creative education with modern tutorials and resources.">
-  <meta name="keywords" content="Creative Taleem, Education, Blog, Learning, Tutorials, Web Development, Programming">
+  <meta name="description" content="Creative Taleem - Professional blogging platform offering high-quality educational content, tutorials, and learning resources. Join thousands of learners worldwide.">
+  <meta name="keywords" content="education, blogging, tutorials, learning, programming, web development, digital marketing, online courses">
   <meta name="author" content="Creative Taleem">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Creative Taleem - Modern Education Platform">
-  <meta property="og:description" content="Unlock creativity and grow your knowledge with modern educational resources and tutorials.">
+  <meta name="googlebot" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Creative Taleem - Professional Education Blog">
+  <meta property="og:description" content="Discover high-quality educational content and tutorials on web development, programming, and digital skills.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://creativetaleem.com">
-  <meta property="og:image" content="/logo.webp">
+  <meta property="og:image" content="https://creativetaleem.com/images/og-image.jpg">
+  <meta property="og:site_name" content="Creative Taleem">
   
-  <title>Creative Taleem - Modern Education Platform</title>
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Creative Taleem - Professional Education Blog">
+  <meta name="twitter:description" content="Discover high-quality educational content and tutorials on web development, programming, and digital skills.">
+  <meta name="twitter:image" content="https://creativetaleem.com/images/twitter-card.jpg">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Creative Taleem",
+    "description": "Professional education blog with high-quality tutorials and learning resources",
+    "url": "https://creativetaleem.com",
+    "image": "https://creativetaleem.com/logo.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Creative Taleem",
+      "url": "https://creativetaleem.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Creative Taleem",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://creativetaleem.com/logo.webp"
+      }
+    }
+  }
+  </script>
+  
+  <title>Creative Taleem - Professional Education Blog | Tutorials & Learning Resources</title>
 
   <link rel="stylesheet" href="/styles/main.css" />
-  <link rel="icon" type="image/x-icon" href="/public/favicon.ico" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="canonical" href="https://creativetaleem.com/" />
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- AdSense Auto Ads (Replace with your AdSense code) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXX" crossorigin="anonymous"></script>
+  
+  <!-- Google Analytics (Replace with your GA code) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
 </head>
 <body>
 
@@ -27,73 +81,62 @@
   <div data-include="/assets/header.html"></div>
 
   <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-background">
-      <div class="hero-particles">
-        <span class="particle particle-1"></span>
-        <span class="particle particle-2"></span>
-        <span class="particle particle-3"></span>
-        <span class="particle particle-4"></span>
-        <span class="particle particle-5"></span>
-        <span class="particle particle-6"></span>
-      </div>
-    </div>
-    <div class="container hero-container">
+  <section class="hero-section">
+    <div class="container">
       <div class="hero-content">
         <div class="hero-badge">
-          <span class="badge-text">🚀 New Learning Experience</span>
+          <span class="badge-icon">🎓</span>
+          <span class="badge-text">Professional Education Platform</span>
         </div>
         <h1 class="hero-title">
-          Welcome to <span class="gradient-text">Creative Taleem</span>
+          Master New Skills with 
+          <span class="gradient-text">Creative Taleem</span>
         </h1>
         <p class="hero-description">
-          Unlock creativity and grow your knowledge with modern educational resources, 
-          interactive tutorials, and innovative learning experiences designed for the digital age.
+          Discover comprehensive tutorials, expert insights, and practical learning resources 
+          designed to accelerate your professional growth in technology and digital skills.
         </p>
         <div class="hero-buttons">
-          <a href="/blog/" class="btn btn-primary">
+          <a href="#latest-posts" class="btn btn-primary">
             <span>Explore Articles</span>
             <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </a>
-          <a href="/courses/" class="btn btn-secondary">
-            <span>View Courses</span>
+          <a href="/categories/" class="btn btn-secondary">
+            <span>Browse Categories</span>
           </a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
             <span class="stat-number">500+</span>
-            <span class="stat-label">Articles</span>
+            <span class="stat-label">Quality Articles</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">50+</span>
-            <span class="stat-label">Courses</span>
+            <span class="stat-number">50K+</span>
+            <span class="stat-label">Monthly Readers</span>
           </div>
           <div class="stat-item">
-            <span class="stat-number">10K+</span>
-            <span class="stat-label">Students</span>
+            <span class="stat-number">100+</span>
+            <span class="stat-label">Expert Authors</span>
           </div>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-image-container">
-          <div class="floating-card card-1">
-            <div class="card-icon">📚</div>
-            <div class="card-title">Learn</div>
-          </div>
-          <div class="floating-card card-2">
-            <div class="card-icon">💡</div>
-            <div class="card-title">Create</div>
-          </div>
-          <div class="floating-card card-3">
-            <div class="card-icon">🎯</div>
-            <div class="card-title">Achieve</div>
-          </div>
-          <div class="hero-main-visual">
-            <div class="visual-circle"></div>
-            <div class="visual-content">
-              <img src="/logo.webp" alt="Creative Taleem" class="hero-logo">
+        <div class="hero-image">
+          <img src="/images/hero-education.webp" alt="Professional Education and Learning" loading="eager">
+          <div class="hero-floating-elements">
+            <div class="floating-card card-1">
+              <div class="card-icon">📚</div>
+              <div class="card-text">Learn</div>
+            </div>
+            <div class="floating-card card-2">
+              <div class="card-icon">💡</div>
+              <div class="card-text">Create</div>
+            </div>
+            <div class="floating-card card-3">
+              <div class="card-icon">🚀</div>
+              <div class="card-text">Grow</div>
             </div>
           </div>
         </div>
@@ -101,156 +144,381 @@
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features">
+  <!-- AdSense Ad Slot 1 -->
+  <div class="ad-container">
     <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Why Choose Creative Taleem?</h2>
-        <p class="section-description">Discover the features that make learning with us exceptional</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-              <path d="M2 17l10 5 10-5"/>
-              <path d="M2 12l10 5 10-5"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Interactive Learning</h3>
-          <p class="feature-description">Engage with hands-on tutorials and interactive content that makes learning enjoyable and effective.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Latest Technologies</h3>
-          <p class="feature-description">Stay ahead with cutting-edge technologies and modern development practices in our comprehensive courses.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <h3 class="feature-title">Expert Community</h3>
-          <p class="feature-description">Join a vibrant community of learners and experts who support each other's growth and success.</p>
-        </div>
+      <div class="ad-wrapper">
+        <span class="ad-label">Advertisement</span>
+        <!-- AdSense Ad Code Here -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-XXXXXXXXX"
+             data-ad-slot="XXXXXXXXX"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Main Content -->
   <main class="main-content">
     <div class="container">
-      <div class="content-layout">
+      <div class="content-wrapper">
+        
+        <!-- Primary Content -->
         <div class="content-primary">
-          <div class="section-header">
-            <h2 class="section-title">Latest Posts</h2>
-            <p class="section-description">Stay updated with our newest articles and tutorials</p>
-          </div>
-          <div class="post-grid">
-            <!-- Blog Post Card -->
-            <article class="post-card">
-              <div class="post-image">
-                <img src="/images/html-post.jpg" alt="HTML5 Tutorial" loading="lazy" />
-                <div class="post-category">Tutorial</div>
-              </div>
-              <div class="post-content">
-                <div class="post-meta">
-                  <span class="post-date">July 20, 2025</span>
-                  <span class="post-read-time">5 min read</span>
-                </div>
-                <h3 class="post-title">
-                  <a href="/blog/html-intro">Getting Started with HTML5</a>
-                </h3>
-                <p class="post-excerpt">A comprehensive beginner-friendly introduction to HTML5 for building modern, semantic websites with best practices.</p>
-                <div class="post-tags">
-                  <span class="tag">HTML5</span>
-                  <span class="tag">Web Development</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="post-card">
-              <div class="post-image">
-                <img src="/images/css-post.jpg" alt="CSS Tips and Tricks" loading="lazy" />
-                <div class="post-category">Tips</div>
-              </div>
-              <div class="post-content">
-                <div class="post-meta">
-                  <span class="post-date">July 18, 2025</span>
-                  <span class="post-read-time">8 min read</span>
-                </div>
-                <h3 class="post-title">
-                  <a href="/blog/css-tips">10 CSS Tips for Better Styling</a>
-                </h3>
-                <p class="post-excerpt">Enhance your website design with these advanced CSS tricks and modern techniques for responsive layouts.</p>
-                <div class="post-tags">
-                  <span class="tag">CSS3</span>
-                  <span class="tag">Design</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="post-card">
-              <div class="post-image">
-                <img src="/images/js-post.jpg" alt="JavaScript Fundamentals" loading="lazy" />
-                <div class="post-category">Course</div>
-              </div>
-              <div class="post-content">
-                <div class="post-meta">
-                  <span class="post-date">July 15, 2025</span>
-                  <span class="post-read-time">12 min read</span>
-                </div>
-                <h3 class="post-title">
-                  <a href="/blog/js-fundamentals">JavaScript Fundamentals for Beginners</a>
-                </h3>
-                <p class="post-excerpt">Master the basics of JavaScript programming with practical examples and interactive coding exercises.</p>
-                <div class="post-tags">
-                  <span class="tag">JavaScript</span>
-                  <span class="tag">Programming</span>
-                </div>
-              </div>
-            </article>
-          </div>
           
-          <div class="load-more-container">
-            <button class="btn btn-outline">
-              <span>Load More Articles</span>
-            </button>
+          <!-- Latest Posts Section -->
+          <section id="latest-posts" class="posts-section">
+            <div class="section-header">
+              <h2 class="section-title">Latest Articles</h2>
+              <p class="section-description">Stay updated with our newest high-quality educational content</p>
+            </div>
+            
+            <div class="posts-grid">
+              <!-- Featured Post -->
+              <article class="post-card featured-post">
+                <div class="post-image">
+                  <img src="/images/featured-post.webp" alt="Complete Guide to Modern Web Development" loading="lazy">
+                  <div class="post-category featured">Featured</div>
+                  <div class="post-reading-time">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    15 min read
+                  </div>
+                </div>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <time datetime="2025-07-20">July 20, 2025</time>
+                    <span class="post-author">By John Smith</span>
+                  </div>
+                  <h3 class="post-title">
+                    <a href="/blog/complete-guide-modern-web-development/">
+                      Complete Guide to Modern Web Development: From Basics to Advanced
+                    </a>
+                  </h3>
+                  <p class="post-excerpt">
+                    Master the essential skills of modern web development with this comprehensive guide covering HTML5, CSS3, JavaScript, and popular frameworks like React and Vue.js.
+                  </p>
+                  <div class="post-tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Tutorial</span>
+                  </div>
+                  <a href="/blog/complete-guide-modern-web-development/" class="read-more-btn">
+                    Read Full Article
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <!-- Regular Posts -->
+              <article class="post-card">
+                <div class="post-image">
+                  <img src="/images/css-advanced-techniques.webp" alt="Advanced CSS Techniques for Professional Websites" loading="lazy">
+                  <div class="post-category">Tutorial</div>
+                  <div class="post-reading-time">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    8 min read
+                  </div>
+                </div>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <time datetime="2025-07-18">July 18, 2025</time>
+                    <span class="post-author">By Sarah Johnson</span>
+                  </div>
+                  <h3 class="post-title">
+                    <a href="/blog/advanced-css-techniques/">
+                      Advanced CSS Techniques for Professional Websites
+                    </a>
+                  </h3>
+                  <p class="post-excerpt">
+                    Explore cutting-edge CSS techniques including Grid layouts, Custom Properties, and modern animation methods to create stunning professional websites.
+                  </p>
+                  <div class="post-tags">
+                    <span class="tag">CSS</span>
+                    <span class="tag">Design</span>
+                  </div>
+                  <a href="/blog/advanced-css-techniques/" class="read-more-btn">
+                    Read Full Article
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <article class="post-card">
+                <div class="post-image">
+                  <img src="/images/javascript-es6.webp" alt="JavaScript ES6+ Features Every Developer Should Know" loading="lazy">
+                  <div class="post-category">Programming</div>
+                  <div class="post-reading-time">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    12 min read
+                  </div>
+                </div>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <time datetime="2025-07-15">July 15, 2025</time>
+                    <span class="post-author">By Mike Chen</span>
+                  </div>
+                  <h3 class="post-title">
+                    <a href="/blog/javascript-es6-features/">
+                      JavaScript ES6+ Features Every Developer Should Know
+                    </a>
+                  </h3>
+                  <p class="post-excerpt">
+                    Discover the most important ES6+ features that will make your JavaScript code more efficient, readable, and maintainable in modern development.
+                  </p>
+                  <div class="post-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">ES6</span>
+                  </div>
+                  <a href="/blog/javascript-es6-features/" class="read-more-btn">
+                    Read Full Article
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+
+              <article class="post-card">
+                <div class="post-image">
+                  <img src="/images/react-best-practices.webp" alt="React.js Best Practices for Scalable Applications" loading="lazy">
+                  <div class="post-category">Framework</div>
+                  <div class="post-reading-time">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <circle cx="12" cy="12" r="10"/>
+                      <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                    10 min read
+                  </div>
+                </div>
+                <div class="post-content">
+                  <div class="post-meta">
+                    <time datetime="2025-07-12">July 12, 2025</time>
+                    <span class="post-author">By Lisa Wang</span>
+                  </div>
+                  <h3 class="post-title">
+                    <a href="/blog/react-best-practices/">
+                      React.js Best Practices for Scalable Applications
+                    </a>
+                  </h3>
+                  <p class="post-excerpt">
+                    Learn industry-standard React.js best practices to build scalable, maintainable applications that can grow with your business needs.
+                  </p>
+                  <div class="post-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Best Practices</span>
+                  </div>
+                  <a href="/blog/react-best-practices/" class="read-more-btn">
+                    Read Full Article
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                  </a>
+                </div>
+              </article>
+            </div>
+
+            <div class="load-more-section">
+              <button class="btn btn-outline load-more-btn">
+                <span>Load More Articles</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+              </button>
+            </div>
+          </section>
+
+          <!-- AdSense Ad Slot 2 -->
+          <div class="ad-container in-content">
+            <div class="ad-wrapper">
+              <span class="ad-label">Advertisement</span>
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-XXXXXXXXX"
+                   data-ad-slot="XXXXXXXXX"></ins>
+              <script>
+                   (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
           </div>
+
+          <!-- Categories Section -->
+          <section class="categories-section">
+            <div class="section-header">
+              <h2 class="section-title">Explore Categories</h2>
+              <p class="section-description">Discover content organized by topics that interest you</p>
+            </div>
+            
+            <div class="categories-grid">
+              <div class="category-card">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="16,18 22,12 16,6"/>
+                    <polyline points="8,6 2,12 8,18"/>
+                  </svg>
+                </div>
+                <h3 class="category-title">Web Development</h3>
+                <p class="category-description">HTML, CSS, JavaScript, and modern frameworks</p>
+                <div class="category-stats">
+                  <span class="post-count">150+ Articles</span>
+                  <span class="category-level">All Levels</span>
+                </div>
+                <a href="/category/web-development/" class="category-link">Explore Category</a>
+              </div>
+
+              <div class="category-card">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                    <line x1="7" y1="2" x2="7" y2="22"/>
+                    <line x1="17" y1="2" x2="17" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <line x1="2" y1="7" x2="7" y2="7"/>
+                    <line x1="2" y1="17" x2="7" y2="17"/>
+                    <line x1="17" y1="17" x2="22" y2="17"/>
+                    <line x1="17" y1="7" x2="22" y2="7"/>
+                  </svg>
+                </div>
+                <h3 class="category-title">UI/UX Design</h3>
+                <p class="category-description">Design principles, tools, and user experience</p>
+                <div class="category-stats">
+                  <span class="post-count">80+ Articles</span>
+                  <span class="category-level">Beginner to Expert</span>
+                </div>
+                <a href="/category/ui-ux-design/" class="category-link">Explore Category</a>
+              </div>
+
+              <div class="category-card">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                    <path d="M2 17l10 5 10-5"/>
+                    <path d="M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <h3 class="category-title">Programming</h3>
+                <p class="category-description">Python, Java, C++, and algorithm tutorials</p>
+                <div class="category-stats">
+                  <span class="post-count">120+ Articles</span>
+                  <span class="category-level">All Levels</span>
+                </div>
+                <a href="/category/programming/" class="category-link">Explore Category</a>
+              </div>
+
+              <div class="category-card">
+                <div class="category-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                  </svg>
+                </div>
+                <h3 class="category-title">Digital Marketing</h3>
+                <p class="category-description">SEO, social media, and online marketing strategies</p>
+                <div class="category-stats">
+                  <span class="post-count">90+ Articles</span>
+                  <span class="category-level">Beginner Friendly</span>
+                </div>
+                <a href="/category/digital-marketing/" class="category-link">Explore Category</a>
+              </div>
+            </div>
+          </section>
         </div>
 
         <!-- Sidebar -->
         <aside class="content-sidebar">
           <div data-include="/assets/sidebar.html"></div>
+          
+          <!-- AdSense Ad Slot 3 - Sidebar -->
+          <div class="ad-container sidebar-ad">
+            <div class="ad-wrapper">
+              <span class="ad-label">Advertisement</span>
+              <ins class="adsbygoogle"
+                   style="display:block"
+                   data-ad-client="ca-pub-XXXXXXXXX"
+                   data-ad-slot="XXXXXXXXX"
+                   data-ad-format="auto"
+                   data-full-width-responsive="true"></ins>
+              <script>
+                   (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
   </main>
 
   <!-- Newsletter Section -->
-  <section class="newsletter">
+  <section class="newsletter-section">
     <div class="container">
       <div class="newsletter-content">
-        <div class="newsletter-text">
-          <h2 class="newsletter-title">Stay Updated</h2>
-          <p class="newsletter-description">Get the latest articles and tutorials delivered to your inbox</p>
+        <div class="newsletter-info">
+          <h2 class="newsletter-title">Stay Updated with Quality Content</h2>
+          <p class="newsletter-description">
+            Join over 10,000 professionals who receive our weekly newsletter with the latest tutorials, 
+            industry insights, and exclusive content delivered directly to your inbox.
+          </p>
+          <div class="newsletter-benefits">
+            <div class="benefit-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="20,6 9,17 4,12"/>
+              </svg>
+              <span>Weekly quality content</span>
+            </div>
+            <div class="benefit-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="20,6 9,17 4,12"/>
+              </svg>
+              <span>Exclusive tutorials</span>
+            </div>
+            <div class="benefit-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <polyline points="20,6 9,17 4,12"/>
+              </svg>
+              <span>No spam, unsubscribe anytime</span>
+            </div>
+          </div>
         </div>
         <form class="newsletter-form">
           <div class="form-group">
-            <input type="email" placeholder="Enter your email address" class="newsletter-input" required>
+            <input 
+              type="email" 
+              placeholder="Enter your email address" 
+              class="newsletter-input" 
+              required
+              aria-label="Email address for newsletter subscription"
+            >
             <button type="submit" class="btn btn-primary newsletter-btn">
-              <span>Subscribe</span>
+              <span>Subscribe Now</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <line x1="22" y1="2" x2="11" y2="13"/>
+                <polygon points="22,2 15,22 11,13 2,9 22,2"/>
+              </svg>
             </button>
           </div>
-          <p class="newsletter-privacy">We respect your privacy. Unsubscribe at any time.</p>
+          <p class="newsletter-privacy">
+            We respect your privacy. Read our 
+            <a href="/privacy-policy/">Privacy Policy</a>
+          </p>
         </form>
       </div>
     </div>
@@ -259,53 +527,15 @@
   <!-- Footer -->
   <div data-include="/assets/footer.html"></div>
 
-  <!-- JS for includes -->
+  <!-- JS Scripts -->
   <script src="/scripts/include.js"></script>
+  <script src="/scripts/main.js"></script>
 
-  <!-- Auto year and interactions -->
+  <!-- Auto year update -->
   <script>
-    // Auto update year
-    const yearSpan = document.getElementById("currentYear");
-    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-    // Newsletter form handling
     document.addEventListener('DOMContentLoaded', function() {
-      const newsletterForm = document.querySelector('.newsletter-form');
-      if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
-          e.preventDefault();
-          const email = this.querySelector('.newsletter-input').value;
-          // Handle newsletter subscription here
-          alert('Thank you for subscribing!');
-          this.reset();
-        });
-      }
-
-      // Load more posts functionality
-      const loadMoreBtn = document.querySelector('.load-more-container .btn');
-      if (loadMoreBtn) {
-        loadMoreBtn.addEventListener('click', function() {
-          // Load more posts logic here
-          this.innerHTML = '<span>Loading...</span>';
-          setTimeout(() => {
-            this.innerHTML = '<span>Load More Articles</span>';
-          }, 1000);
-        });
-      }
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
+      const yearSpan = document.getElementById("currentYear");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
     });
   </script>
 </body>
