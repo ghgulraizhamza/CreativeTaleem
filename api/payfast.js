@@ -14,8 +14,8 @@ export default async function handler(req, res) {
   const payfastUrl = 'https://sandbox.payfast.co.za/eng/process';
 
   // Required PayFast merchant details (replace with real sandbox/live details)
-  const merchant_id = '10000100'; // your sandbox merchant_id
-  const merchant_key = '46f0cd694581a'; // your sandbox merchant_key
+  const merchant_id = '110498'; // your sandbox merchant_id
+  const merchant_key = 'wDWFIzyBIzdcBy_pJdme3HSB'; // your sandbox merchant_key
   const return_url = 'https://creative-taleem.vercel.app/success';
   const cancel_url = 'https://creative-taleem.vercel.app/cancel';
   const notify_url = 'https://creative-taleem.vercel.app/api/payfast';
