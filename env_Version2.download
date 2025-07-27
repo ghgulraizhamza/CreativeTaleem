@@ -1,0 +1,9 @@
+# PayFast Sandbox Configuration
+PAYFAST_MERCHANT_ID=10000100
+PAYFAST_MERCHANT_KEY=46f0cd694581a
+PAYFAST_PASSPHRASE=
+
+# For Production, replace with your live credentials:
+# PAYFAST_MERCHANT_ID=your_live_merchant_id
+# PAYFAST_MERCHANT_KEY=your_live_merchant_key
+# PAYFAST_PASSPHRASE=your_live_passphrase
