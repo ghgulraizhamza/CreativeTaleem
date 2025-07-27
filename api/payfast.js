@@ -1,39 +1,51 @@
-// Vercel uses 'api' folder for serverless functions
-const crypto = require("crypto");
+// File: /api/payfast.js
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    return res.status(405).send("Method Not Allowed");
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
   const {
-    amount,
-    item_name,
-    return_url = "https://yourapp.com/success",
-    cancel_url = "https://yourapp.com/cancel",
-    notify_url = "https://yourapp.com/api/payfast", // callback
+    amount = '100.00',
+    name_first = 'User',
+    email_address = 'test@example.com',
   } = req.body;
 
-  const paymentData = {
-    merchant_id: "10000100", // test id
-    merchant_key: "46f0cd694581a",
-    amount: parseFloat(amount).toFixed(2),
-    item_name,
+  const payfastUrl = 'https://sandbox.payfast.co.za/eng/process';
+
+  // Required PayFast merchant details (replace with real sandbox/live details)
+  const merchant_id = '10000100'; // your sandbox merchant_id
+  const merchant_key = '46f0cd694581a'; // your sandbox merchant_key
+  const return_url = 'https://creative-taleem.vercel.app/success';
+  const cancel_url = 'https://creative-taleem.vercel.app/cancel';
+  const notify_url = 'https://creative-taleem.vercel.app/api/payfast';
+
+  // Construct data string
+  const data = new URLSearchParams({
+    merchant_id,
+    merchant_key,
+    amount,
+    item_name: 'Test Payment',
+    name_first,
+    email_address,
     return_url,
     cancel_url,
     notify_url,
-  };
-
-  // Generate query string
-  const query = Object.entries(paymentData)
-    .map(([k, v]) => `${k}=${encodeURIComponent(v)}`)
-    .join("&");
-
-  // Generate signature (optional for testing)
-  const signature = crypto.createHash("md5").update(query).digest("hex");
-
-  // Redirect user to PayFast
-  res.status(200).json({
-    payment_url: `https://sandbox.payfast.co.za/eng/process?${query}&signature=${signature}`,
   });
+
+  // Redirect to PayFast
+  const redirectForm = `
+    <html>
+      <body onload="document.forms[0].submit()">
+        <form action="${payfastUrl}" method="POST">
+          ${[...data.entries()]
+            .map(([key, val]) => `<input type="hidden" name="${key}" value="${val}" />`)
+            .join('\n')}
+        </form>
+      </body>
+    </html>
+  `;
+
+  res.setHeader('Content-Type', 'text/html');
+  res.send(redirectForm);
 }
