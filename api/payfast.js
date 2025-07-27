@@ -1,51 +1,104 @@
-// File: /api/payfast.js
+import crypto from 'crypto';
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const {
-    amount = '100.00',
-    name_first = 'User',
-    email_address = 'test@example.com',
-  } = req.body;
+  try {
+    const {
+      amount = '100.00',
+      name_first = 'User',
+      email_address = 'test@example.com',
+    } = req.body;
 
-  const payfastUrl = 'https://sandbox.payfast.co.za/eng/process';
+    // Input validation
+    if (!email_address || !email_address.includes('@')) {
+      return res.status(400).json({ error: 'Valid email required' });
+    }
 
-  // Required PayFast merchant details (replace with real sandbox/live details)
-  const merchant_id = '110498'; // your sandbox merchant_id
-  const merchant_key = 'wDWFIzyBIzdcBy_pJdme3HSB'; // your sandbox merchant_key
-  const return_url = 'https://creative-taleem.vercel.app/success';
-  const cancel_url = 'https://creative-taleem.vercel.app/cancel';
-  const notify_url = 'https://creative-taleem.vercel.app/api/payfast';
+    if (!amount || isNaN(amount) || parseFloat(amount) <= 0) {
+      return res.status(400).json({ error: 'Valid amount required' });
+    }
 
-  // Construct data string
-  const data = new URLSearchParams({
-    merchant_id,
-    merchant_key,
-    amount,
-    item_name: 'Test Payment',
-    name_first,
-    email_address,
-    return_url,
-    cancel_url,
-    notify_url,
-  });
+    const payfastUrl = 'https://sandbox.payfast.co.za/eng/process';
 
-  // Redirect to PayFast
-  const redirectForm = `
-    <html>
-      <body onload="document.forms[0].submit()">
-        <form action="${payfastUrl}" method="POST">
-          ${[...data.entries()]
-            .map(([key, val]) => `<input type="hidden" name="${key}" value="${val}" />`)
-            .join('\n')}
-        </form>
-      </body>
-    </html>
-  `;
+    // Use environment variables for security
+    const merchant_id = process.env.PAYFAST_MERCHANT_ID || '10000100';
+    const merchant_key = process.env.PAYFAST_MERCHANT_KEY || 'changeme';
+    const passphrase = process.env.PAYFAST_PASSPHRASE || '';
 
-  res.setHeader('Content-Type', 'text/html');
-  res.send(redirectForm);
+    const return_url = 'https://creative-taleem.vercel.app/success';
+    const cancel_url = 'https://creative-taleem.vercel.app/cancel';
+    const notify_url = 'https://creative-taleem.vercel.app/api/payfast-notify';
+
+    // PayFast data object
+    const payfastData = {
+      merchant_id,
+      merchant_key,
+      return_url,
+      cancel_url,
+      notify_url,
+      name_first,
+      email_address,
+      amount: parseFloat(amount).toFixed(2),
+      item_name: 'Test Payment',
+      custom_str1: 'Payment via Creative Taleem',
+    };
+
+    // Generate signature
+    let dataString = '';
+    Object.keys(payfastData).forEach(key => {
+      if (payfastData[key] !== '') {
+        dataString += `${key}=${encodeURIComponent(payfastData[key])}&`;
+      }
+    });
+
+    // Remove trailing &
+    dataString = dataString.slice(0, -1);
+
+    // Add passphrase if set
+    if (passphrase) {
+      dataString += `&passphrase=${encodeURIComponent(passphrase)}`;
+    }
+
+    // Generate MD5 signature
+    const signature = crypto.createHash('md5').update(dataString).digest('hex');
+
+    // Remove merchant_key from form data (security)
+    delete payfastData.merchant_key;
+
+    // Add signature to form data
+    payfastData.signature = signature;
+
+    // Create form data
+    const formFields = Object.entries(payfastData)
+      .map(([key, value]) => `<input type="hidden" name="${key}" value="${value}" />`)
+      .join('\n');
+
+    const redirectForm = `
+      <!DOCTYPE html>
+      <html>
+        <head>
+          <title>Redirecting to PayFast...</title>
+        </head>
+        <body onload="document.forms[0].submit()">
+          <div style="text-align: center; padding: 50px;">
+            <h2>Redirecting to PayFast...</h2>
+            <p>Please wait while we redirect you to complete your payment.</p>
+          </div>
+          <form action="${payfastUrl}" method="POST">
+            ${formFields}
+          </form>
+        </body>
+      </html>
+    `;
+
+    res.setHeader('Content-Type', 'text/html');
+    res.send(redirectForm);
+
+  } catch (error) {
+    console.error('PayFast error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
 }
